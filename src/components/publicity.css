@@ -1,0 +1,19 @@
+
+.publicitySection{
+    text-align: center;
+}
+
+.publicity{
+    margin: auto;
+    width: 200px;
+    background: linear-gradient(to right, purple,orange);
+    -webkit-background-clip: text;
+     color: transparent;  
+}
+
+.cardContainer{
+    border: 5px solid green;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
