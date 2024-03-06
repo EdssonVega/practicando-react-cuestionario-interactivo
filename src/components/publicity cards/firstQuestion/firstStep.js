@@ -3,7 +3,7 @@ import "./firstStep.css";
 import Tm from "./images/twisted-metal-4.jpg"
 import Sh from "./images/silent-hill-1.jpg"
 import Cb from "./images/crash-bandicoot.jpg"
-import Options from "./options";
+import Options1 from "./options1";
 
 const videogames =[
     {
@@ -34,7 +34,7 @@ function FirstStepSection(){
             </h2>
             <div className="contenedorOpciones1">
                 {videogames.map((videogame,index)=>(
-                    <Options videogame={videogame} key={index} />
+                    <Options1 videogame={videogame} key={index} />
                 ))}
             </div>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import FirstStepSection from "./firstQuestion/firstStep";
+import SecondStepSection from "./secondQuestion/secondStep";
 import "./form.css";
 
 
@@ -27,7 +28,12 @@ function FormSection(){
                  Fill the form
                 </h1>
                 <p>step {step} of 3</p>
-                <FirstStepSection />
+                {step == 1 && (
+                    <FirstStepSection />
+                )}
+                {step == 2 && (
+                    <SecondStepSection />
+                )}
                 <div className="stepButtons">
                     {step>1 && step<4 && (
                         <div onClick={previous} className="previous">
