@@ -1,0 +1,24 @@
+.firstStep{
+    border: 1px solid purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.firstStep h1{    
+    background: linear-gradient(to right, purple,orange);
+    -webkit-background-clip: text;
+     color: transparent;  
+     width: fit-content;
+}
+
+.firstStep h2{
+    font-size: 1rem;
+}
+
+.contenedorOpciones1{
+    display: flex;
+    gap: 20px;
+}
