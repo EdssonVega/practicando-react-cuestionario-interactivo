@@ -1,6 +1,7 @@
 import Navbarsection from './components/navbar.js';
 import IntroductionSection from './components/introduction.js';
 import PublicitySection from './components/publicity.js';
+import FormSection from './components/publicity cards/form.js';
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Navbarsection />
       <IntroductionSection />
       <PublicitySection />
+      <FormSection />
     </div>
   );
 }

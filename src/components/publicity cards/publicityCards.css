@@ -18,13 +18,20 @@
 }
 
 .cardContainer p{
-    margin: 0;
-    
+    display: flex;
+    align-items: center;
+    height: 15%;
+    margin: 0; 
+}
+
+.cardContainer h3{
+    height: 10%;
+    margin: 0; 
 }
 
 .cardContainer button{
-    margin-top: 10px;
-    height: 2rem;
+    font-size: 1.2rem;
+    height: 15%;
     border-radius: 0 0 10px 10px;
     cursor: pointer;
     background-color: black;
