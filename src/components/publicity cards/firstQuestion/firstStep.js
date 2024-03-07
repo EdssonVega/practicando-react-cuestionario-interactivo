@@ -4,6 +4,8 @@ import Tm from "./images/twisted-metal-4.jpg"
 import Sh from "./images/silent-hill-1.jpg"
 import Cb from "./images/crash-bandicoot.jpg"
 import Options1 from "./options1";
+import { useState } from "react";
+
 
 const videogames =[
     {
@@ -23,7 +25,17 @@ const videogames =[
     }
 ]
 
+
+
 function FirstStepSection(){
+
+    const [selectedCard, setselectedCard] = useState(null)
+
+    const clickCard = (videogame) =>{
+        setselectedCard(videogame.id)
+    }
+
+   console.log(selectedCard)
     return(
         <div className="firstStep">
             <h1>
@@ -34,7 +46,7 @@ function FirstStepSection(){
             </h2>
             <div className="contenedorOpciones1">
                 {videogames.map((videogame,index)=>(
-                    <Options1 videogame={videogame} key={index} />
+                    <Options1 videogame={videogame} key={index} clickCard={clickCard} selectedCard={selectedCard} />
                 ))}
             </div>
         </div>

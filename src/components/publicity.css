@@ -13,7 +13,6 @@
 
 .cardContainer{
     margin: 50px 0;
-    border: 5px solid green;
     display: flex;
     gap: 50px;
     justify-content: center;
