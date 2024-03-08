@@ -1,4 +1,4 @@
-.secondStep{
+.thirdStep{
 
     display: flex;
     flex-direction: column;
@@ -7,18 +7,18 @@
 }
 
 
-.secondStep h1{    
+.thirdStep h1{    
     background: linear-gradient(to right, purple,orange);
     -webkit-background-clip: text;
      color: transparent;  
      width: fit-content;
 }
 
-.secondStep h2{
+.thirdStep h2{
     font-size: 1rem;
 }
 
-.contenedorOpciones2{
+.contenedorOpciones3{
     display: flex;
     gap: 20px;
 }

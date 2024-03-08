@@ -33,9 +33,10 @@ function FirstStepSection(){
 
     const clickCard = (videogame) =>{
         setselectedCard(videogame.id)
+        localStorage.setItem("tittle", videogame.tittle)
+        localStorage.setItem("picture",videogame.image)
     }
 
-   console.log(selectedCard)
     return(
         <div className="firstStep">
             <h1>
