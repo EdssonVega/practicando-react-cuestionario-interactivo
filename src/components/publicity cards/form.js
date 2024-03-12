@@ -3,10 +3,17 @@ import { useState } from "react";
 import FirstStepSection from "./firstQuestion/firstStep";
 import SecondStepSection from "./secondQuestion/secondStep";
 import ThirdStepSection from "./thirdQuestion/thirdStep";
+import ShowResultsButton from "./viewResultsButton";
 import "./form.css";
 
 
 function FormSection(){
+
+    const [showResult,setshowResult] = useState(false)
+
+    const finish = () => {
+        setshowResult(!showResult)
+    }
 
     const [step,nextStep]= useState(1)
 
@@ -36,7 +43,7 @@ function FormSection(){
                     <SecondStepSection />
                 )}
                 {step == 3 && (
-                    <ThirdStepSection />
+                    <ThirdStepSection finish={finish}/>
                 )
 
                 }
@@ -51,7 +58,11 @@ function FormSection(){
                             Next step
                         </div>
                     )}
+                    {showResult==true &&(
+                        <ShowResultsButton className="results"/>
+                    )}
                 </div>
+                
             </form>
         </section>
     )

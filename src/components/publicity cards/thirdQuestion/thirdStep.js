@@ -8,23 +8,33 @@ import Options3 from "./options3";
 
 const dogs=[
     {
-        Id:1,
+        id:1,
         tittle:"golden",
-        Image:golden
+        image:golden
     },
     {
-        Id:2,
+        id:2,
         tittle:"husky",
-        Image:husky
+        image:husky
     },
     {
-        Id:3,
+        id:3,
         tittle:"doberman",
-        Image:doberman
+        image:doberman
     }
 ]
 
-function ThirdStepSection(){
+function ThirdStepSection({finish}){
+
+    const [selectedCard, setselectedCard] = useState (null)
+
+    const clickCard = (dog) => {
+        setselectedCard(dog.id)
+        localStorage.setItem("tittle",dog.tittle)
+        localStorage.setItem("picture",dog.image)
+        finish()
+    }
+
     return(
         <div className="thirdStep">
             <h1>
@@ -34,9 +44,9 @@ function ThirdStepSection(){
                 Select your favorite dog then click on the button "See results"
             </h2>
             <div className="contenedorOpciones3">
-                {dogs.map((dog,index)=>{
-                    <Options3 image={dogs.Image} tittle={dogs.tittle} key={index}/>
-                })}
+                {dogs.map((dog,index)=>(
+                    <Options3 dog={dog} key={index} clickCard={clickCard} selectedCard={selectedCard}/>
+                ))}
             </div>
         </div>
     )
