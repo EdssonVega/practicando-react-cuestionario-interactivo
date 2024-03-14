@@ -1,10 +1,15 @@
 import React from "react";
+
 import "./viewResultsButton.css"
 
-function ShowResultsButton(){
+function ShowResultsButton({finishQuestions}){
+    
+    const funcionaYaPues = () =>{
+        finishQuestions()
+    }
     
     return(
-        <div className="resultsButton">
+        <div className="resultsButton" onClick={funcionaYaPues}>
             View results
         </div>
     )

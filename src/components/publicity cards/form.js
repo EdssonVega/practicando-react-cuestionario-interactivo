@@ -4,13 +4,19 @@ import FirstStepSection from "./firstQuestion/firstStep";
 import SecondStepSection from "./secondQuestion/secondStep";
 import ThirdStepSection from "./thirdQuestion/thirdStep";
 import ShowResultsButton from "./viewResultsButton";
+import Pop from "../resultsModal";
 import "./form.css";
 
 
-function FormSection(){
+function FormSection({finalmenteFuncionara}){
+    
+    const finishQuestions = () =>{
+        finalmenteFuncionara()
+    }
 
+ 
     const [showResult,setshowResult] = useState(false)
-
+    
     const finish = () => {
         setshowResult(!showResult)
     }
@@ -48,7 +54,7 @@ function FormSection(){
 
                 }
                 <div className="stepButtons">
-                    {step>1 && step<4 && (
+                    {step>1 && step<4 &&(
                         <div onClick={previous} className="previous">
                             Previous step
                         </div>  
@@ -59,12 +65,13 @@ function FormSection(){
                         </div>
                     )}
                     {showResult==true &&(
-                        <ShowResultsButton className="results"/>
+                        <ShowResultsButton finishQuestions={finishQuestions}/>
                     )}
                 </div>
-                
             </form>
+        
         </section>
+        
     )
 }
 
